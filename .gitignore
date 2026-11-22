@@ -3,7 +3,8 @@ data/
 
 # Compiled binary (cmd/zcode2api), Windows and Unix outputs.
 /zcode2api
-zcode2api.exe
+*.exe
+*.exe~
 
 # Design docs and UI mockup reference — local only, not part of the release.
 docs/
@@ -19,7 +20,7 @@ demo/
 run-dev.ps1
 
 # Web UI build output and dependencies (embedded via go:embed).
-# The index.html placeholder stays tracked so `go build` works pre-build.
-web/dist/*
-!web/dist/index.html
+# Nothing in web/dist is tracked: run `npm run build` (root script) before
+# `go build` — the binary embeds dist via web/embed.go.
+web/dist/
 web/node_modules/

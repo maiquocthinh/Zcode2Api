@@ -7,11 +7,17 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "check": "tsc --noEmit"
+    "check": "tsc --noEmit",
+    "format": "prettier --write \"src/**/*.{ts,svelte,css}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,svelte,css}\"",
+    "lint": "npm run format:check && npm run check && svelte-check --threshold error"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "prettier": "^3.10.1",
+    "prettier-plugin-svelte": "^4.2.0",
     "svelte": "^5.20.0",
+    "svelte-check": "^4.7.8",
     "typescript": "^5.7.3",
     "vite": "^6.1.0"
   }
