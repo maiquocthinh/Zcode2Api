@@ -1,0 +1,25 @@
+# SQLite database directory (DB_PATH default).
+data/
+
+# Compiled binary (cmd/zcode2api), Windows and Unix outputs.
+/zcode2api
+zcode2api.exe
+
+# Design docs and UI mockup reference — local only, not part of the release.
+docs/
+demo/
+
+# Local build scratch output.
+/build/
+
+# Local secrets — never commit.
+.env
+
+# Local dev launcher: carries dev keys and machine-specific paths.
+run-dev.ps1
+
+# Web UI build output and dependencies (embedded via go:embed).
+# The index.html placeholder stays tracked so `go build` works pre-build.
+web/dist/*
+!web/dist/index.html
+web/node_modules/

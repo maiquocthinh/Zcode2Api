@@ -1,0 +1,15 @@
+# Build context for the 3-stage Dockerfile: stage 1 rebuilds the UI from
+# web/src, stage 2 compiles Go sources, stage 3 copies only binary + certs.
+# Everything else stays out to keep the context small and the build hermetic.
+.git
+.gitignore
+.env
+.env.example
+build
+data
+demo
+docs
+zcode2api
+*.md
+web/node_modules
+web/dist
